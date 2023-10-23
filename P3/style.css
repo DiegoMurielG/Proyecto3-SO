@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "Rubik-light";
+    src: url(./assets/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Rubik-bold";
+    src: url(./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf);
+}
+:root{
+    --header-hight: 15vh;
+    --font-color: #fafafa;
+}
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.flex{
+    display: flex;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+body{
+    min-width: 300px;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    max-height: 100%;
+    background-color: #141414;
+    background-image: url(./assets/media/img/dummybg.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--font-color);
+    font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    /* justify-content: space-e; */
+    align-items: flex-start;
+}
+/* .header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-hight, fit-content);
+    background: #242424;
+    z-index: 5;
+    font-size: 14px;
+}
+.titulo{
+    width: 50%;
+    font-family: "Rubik-bold", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 1em;
+    line-height: 0.8;
+}
+.titulo h1{
+    margin: 0;
+} */
+.containerDatos{
+    width: 40%;
+    padding: 0 0.5em;
+}
+#integrantes{
+    padding-left: 0;
+    list-style: none;
+}
+.dato:not(h3){
+    font-size: 0.7em;
+}
+
+/* =================
+====================
+==== CONTENIDO =====
+====================
+================= */
+
+.containerTarjeta{
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+}
+.containerTarjeta a{
+    width: 100%;
+}
+.tarjeta{
+    width: 100%;
+    height: calc(100vh - var(--header-hight));
+    background-size: cover;
+    /* background-image: url(./assets/media/img/dummy1.jpg); */
+    background: linear-gradient(0.25deg, #3f87a6, #ebf8e1, #f69d3c) cover/center;
+    background-repeat: no-repeat;
+    font-size: 2em;
+    text-align: center;
+    /* transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out; */
+}
+.nombreIntegrante{
+    width: 100%;
+}
+#tarjetaIntegrante1{
+    background-image: url(./assets/media/img/retrato.jpg);
+}
+#tarjetaIntegrante2{
+    background-image: url(./assets/media/img/retratoDiego.jpg);
+}
+#tarjetaIntegrante3{
+    background-image: url(./assets/media/img/retratoRamon.jpg);
+}
+/* .dummy{
+    flex: 0;
+    transition: flex 0.3s;
+} */
+
+/* .tarjeta p{ */
+.dummy{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    background: rgba(1, 1, 1, 0.4);
+    -webkit-backdrop-filter:blur(7.5px);
+    backdrop-filter: blur(7.5px);
+}
+.dummy > p{
+    margin: 1.5em 0;
+    padding: 0 0.5em;
+}
+
+@media screen and ( min-width: 768px){
+    :root{
+        /* --header-hight: 15vh;
+        --font-color: #fafafa; */
+        --separacion: 0.8em;
+    }
+    .containerTarjeta{
+        width: 60%;
+        margin: 0 20%;
+        overflow: hidden;
+    }
+    /* .header{
+        font-size: 16px;
+        justify-content: space-between;
+    }
+    .titulo{
+        padding-left: 10%;
+    } */
+    /* Tu elemento containerTarjetas no
+    cambia de tamaño conforme haces hover
+    sobre las tarjetas */
+    .containerTarjeta{
+        /* width: fit-content; */
+        flex-direction: row;
+        margin-top: 2em;
+        height: auto;
+    }
+    .tarjeta{
+        height: 50vh;
+        font-size: 1em;
+    }
+    .tarjeta:hover{
+        width: 125%;
+        height: auto;
+        aspect-ratio: 9/12;
+        align-items: flex-end;
+    }
+}
